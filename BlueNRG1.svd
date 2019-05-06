@@ -481,16 +481,19 @@
                             <name>MFT1_TIMER_B</name>
                             <description>MFT1 timer B.&lt;ul&gt;&lt;li&gt;0x00: IO0.&lt;/li&gt;&lt;li&gt;0x01: IO1&lt;/li&gt;&lt;li&gt;0x02: IO2&lt;/li&gt;&lt;li&gt;...&lt;/li&gt;&lt;li&gt;0x0E: IO14&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>8</bitOffset>
+                            <bitWidth>8</bitWidth>
                         </field>
                         <field derivedFrom="MFT1_TIMER_A">
                             <name>MFT2_TIMER_A</name>
                             <description>MFT2 timer A.&lt;ul&gt;&lt;li&gt;0x00: IO0.&lt;/li&gt;&lt;li&gt;0x01: IO1&lt;/li&gt;&lt;li&gt;0x02: IO2&lt;/li&gt;&lt;li&gt;...&lt;/li&gt;&lt;li&gt;0x0E: IO14&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>16</bitOffset>
+                            <bitWidth>8</bitWidth>
                         </field>
                         <field derivedFrom="MFT1_TIMER_A">
                             <name>MFT2_TIMER_B</name>
                             <description>MFT2 timer B.&lt;ul&gt;&lt;li&gt;0x00: IO0.&lt;/li&gt;&lt;li&gt;0x01: IO1&lt;/li&gt;&lt;li&gt;0x02: IO2&lt;/li&gt;&lt;li&gt;...&lt;/li&gt;&lt;li&gt;0x0E: IO14&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>24</bitOffset>
+                            <bitWidth>8</bitWidth>
                         </field>
                     </fields>
                 </register>
@@ -564,26 +567,31 @@
                             <name>CMDSTART</name>
                             <description>Command is started.</description>
                             <bitOffset>1</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>CMDERR</name>
                             <description>Command written while BUSY</description>
                             <bitOffset>2</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>ILLCMD</name>
                             <description>Illegal command written</description>
                             <bitOffset>3</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>READOK</name>
                             <description>Mass read was OK.</description>
                             <bitOffset>4</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>FLNREADY</name>
                             <description>Flash not ready (sleep).</description>
                             <bitOffset>5</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                     </fields>
                 </register>
@@ -618,26 +626,31 @@
                             <name>CMDSTART</name>
                             <description>Command is started.</description>
                             <bitOffset>1</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>CMDERR</name>
                             <description>Command written while BUSY</description>
                             <bitOffset>2</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>ILLCMD</name>
                             <description>Illegal command written</description>
                             <bitOffset>3</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>READOK</name>
                             <description>Mass read was OK.</description>
                             <bitOffset>4</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>FLNREADY</name>
                             <description>Flash not ready (sleep).</description>
                             <bitOffset>5</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                     </fields>
                 </register>
@@ -672,26 +685,31 @@
                             <name>CMDSTART</name>
                             <description>Command is started.</description>
                             <bitOffset>1</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>CMDERR</name>
                             <description>Command written while BUSY</description>
                             <bitOffset>2</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>ILLCMD</name>
                             <description>Illegal command written</description>
                             <bitOffset>3</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>READOK</name>
                             <description>Mass read was OK.</description>
                             <bitOffset>4</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CMDDONE">
                             <name>FLNREADY</name>
                             <description>Flash not ready (sleep).</description>
                             <bitOffset>5</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                     </fields>
                 </register>
@@ -1620,46 +1638,55 @@
                             <name>RXIM</name>
                             <description>Receive interrupt mask. On a read, the current mask for the RXIM interrupt is returned.&lt;ul&gt;&lt;li&gt;0: Clears the mask (interrupt is disabled).&lt;/li&gt;&lt;li&gt;1: Sets the mask (interrupt is enabled).&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>4</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CTSMIM">
                             <name>TXIM</name>
                             <description>Transmit interrupt mask. On a read, the current mask for the TXIM interrupt is returned.&lt;ul&gt;&lt;li&gt;0: Clears the mask (interrupt is disabled).&lt;/li&gt;&lt;li&gt;1: Sets the mask (interrupt is enabled).&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>5</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CTSMIM">
                             <name>RTIM</name>
                             <description>Receive timeout interrupt mask. On a read, the current mask for the RTIM interrupt is returned.&lt;ul&gt;&lt;li&gt;0: Clears the mask (interrupt is disabled).&lt;/li&gt;&lt;li&gt;1: Sets the mask (interrupt is enabled).&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>6</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CTSMIM">
                             <name>FEIM</name>
                             <description>Framing error interrupt mask. On a read, the current mask for the FEIM interrupt is returned.&lt;ul&gt;&lt;li&gt;0: Clears the mask (interrupt is disabled).&lt;/li&gt;&lt;li&gt;1: Sets the mask (interrupt is enabled).&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>7</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CTSMIM">
                             <name>PEIM</name>
                             <description>Parity error interrupt mask. On a read, the current mask for the PEIM interrupt is returned.&lt;ul&gt;&lt;li&gt;0: Clears the mask (interrupt is disabled).&lt;/li&gt;&lt;li&gt;1: Sets the mask (interrupt is enabled).&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>8</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CTSMIM">
                             <name>BEIM</name>
                             <description>Break error interrupt mask. On a read, the current mask for the BEIM interrupt is returned.&lt;ul&gt;&lt;li&gt;0: Clears the mask (interrupt is disabled).&lt;/li&gt;&lt;li&gt;1: Sets the mask (interrupt is enabled).&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>9</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CTSMIM">
                             <name>OEIM</name>
                             <description>Overrun error interrupt mask. On a read, the current mask for the OEIM interrupt is returned.&lt;ul&gt;&lt;li&gt;0: Clears the mask (interrupt is disabled).&lt;/li&gt;&lt;li&gt;1: Sets the mask (interrupt is enabled).&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>10</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CTSMIM">
                             <name>XOFFIM</name>
                             <description>XOFF interrupt mask. On a read, the current mask for the XOFFIM interrupt is returned.&lt;ul&gt;&lt;li&gt;0: Clears the mask (interrupt is disabled).&lt;/li&gt;&lt;li&gt;1: Sets the mask (interrupt is enabled).&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>11</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="CTSMIM">
                             <name>TXFEIM</name>
                             <description>TX FIFO empty interrupt mask. On a read, the current mask for the TXFEIM interrupt is returned.&lt;ul&gt;&lt;li&gt;0: Clears the mask (interrupt is disabled).&lt;/li&gt;&lt;li&gt;1: Sets the mask (interrupt is enabled).&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>12</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                     </fields>
                 </register>
@@ -3009,7 +3036,7 @@
                             <writeConstraint>
                                 <range>
                                     <minimum>1</minimum>
-                                    <maximum>0xFFFFFFFF</maximum>
+                                    <maximum>4294967295</maximum>
                                 </range>
                             </writeConstraint>
                         </field>
@@ -3857,7 +3884,7 @@
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x0003FFFF</resetValue>
-                    <resetMask> 0x000FFFFF</resetMask>
+                    <resetMask>0x000FFFFF</resetMask>
                     <fields>
                         <field>
                             <name>GPIO</name>
@@ -3991,36 +4018,43 @@
                             <name>ADC_CH1</name>
                             <description>Select ADC on DMA channel 1 instead of peripheral</description>
                             <bitOffset>1</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="ADC_CH0">
                             <name>ADC_CH2</name>
                             <description>Select ADC on DMA channel 2 instead of peripheral</description>
                             <bitOffset>2</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="ADC_CH0">
                             <name>ADC_CH3</name>
                             <description>Select ADC on DMA channel 3 instead of peripheral</description>
                             <bitOffset>3</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="ADC_CH0">
                             <name>ADC_CH4</name>
                             <description>Select ADC on DMA channel 4 instead of peripheral</description>
                             <bitOffset>4</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="ADC_CH0">
                             <name>ADC_CH5</name>
                             <description>Select ADC on DMA channel 5 instead of peripheral</description>
                             <bitOffset>5</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="ADC_CH0">
                             <name>ADC_CH6</name>
                             <description>Select ADC on DMA channel 6 instead of peripheral</description>
                             <bitOffset>6</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="ADC_CH0">
                             <name>ADC_CH7</name>
                             <description>Select ADC on DMA channel 7 instead of peripheral</description>
                             <bitOffset>7</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                     </fields>
                 </register>
@@ -4662,71 +4696,85 @@
                             <name>TXFNEM</name>
                             <description>TX FIFO nearly empty mask. TXFNEM enables the interrupt bit TXFNE:&lt;ul&gt;&lt;li&gt;0: TXFNE interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: TXFNE interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>1</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>TXFFM</name>
                             <description>TX FIFO full mask. TXFFM enables the interrupt bit TXFF:&lt;ul&gt;&lt;li&gt;0: TXFF interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: TXFF interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>2</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>TXFOVRM</name>
                             <description>TX FIFO overrun mask. TXOVRM enables the interrupt bit TXOVR:&lt;ul&gt;&lt;li&gt;0: TXOVR interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: TXOVR interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>3</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>RXFEM</name>
                             <description>RX FIFO empty mask. RXFEM enables the interrupt bit RXFE:&lt;ul&gt;&lt;li&gt;0: RXFE interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: RXFE interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>4</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>RXFNFM</name>
                             <description>RX FIFO nearly full mask. RXNFM enables the interrupt bit RXNF:&lt;ul&gt;&lt;li&gt;0: RXNF interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: RXNF interrupt is enabled&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>5</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>RXFFM</name>
                             <description>RX FIFO full mask. RXFFM enables the interrupt bit RXFF:&lt;ul&gt;&lt;li&gt;0: RXFF interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: RXFF interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>6</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>RFSRM</name>
                             <description>Read-from-Slave request mask. RFSRM enables the interrupt bit RFSR:&lt;ul&gt;&lt;li&gt;0: RFSR interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: RFSR interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>16</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>RFSEM</name>
                             <description>Read-from-Slave empty mask. RFSEM enables the interrupt bit RFSE:&lt;ul&gt;&lt;li&gt;0: RFSE interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: RFSE interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>17</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>WTSRM</name>
                             <description>Write-to-Slave request mask. WTSRM enables the interrupt bit WTSR:&lt;ul&gt;&lt;li&gt;0: WTSR interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: WTSR interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>18</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>MTDM</name>
                             <description>Master Transaction done mask. MTDM enables the interrupt bit MTD:&lt;ul&gt;&lt;li&gt;0: MTD interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: MTD interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>19</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>STDM</name>
                             <description>Slave Transaction done mask. STDM enables the interrupt bit STD:&lt;ul&gt;&lt;li&gt;0: STDM interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: STDM interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>20</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>MALM</name>
                             <description>Master Arbitration lost mask. MALM enables the interrupt bit MAL:&lt;ul&gt;&lt;li&gt;0: MAL interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: MAL interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>24</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>BERRM</name>
                             <description>Bus Error mask. BERRM enables the interrupt bit BERR:&lt;ul&gt;&lt;li&gt;0: BERR interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: BERR interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>25</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         <field derivedFrom="TXFEM">
                             <name>MTDWSM</name>
                             <description>Master Transaction done without stop mask. MTDWSM enables the interrupt bit MTDWS:&lt;ul&gt;&lt;li&gt;0: MTDWS interrupt is disabled.&lt;/li&gt;&lt;li&gt;1: MTDWS interrupt is enabled.&lt;/li&gt;&lt;/ul&gt;</description>
                             <bitOffset>28</bitOffset>
+                            <bitWidth>1</bitWidth>
                         </field>
                         </fields>
                 </register>
